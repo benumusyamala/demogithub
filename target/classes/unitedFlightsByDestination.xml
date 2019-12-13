@@ -14,5 +14,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 }]]]></http:uri-params>
 		</http:request>
 		<logger level="INFO" doc:name="Logger" doc:id="b14274ff-f31b-4157-bcb2-0a4f69cf6e6f" message="final responce"/>
+		<logger level="INFO" doc:name="Logger" doc:id="904865f2-2ea8-4f8e-9a4f-791af918d713" message="#[payload]"/>
 	</flow>
 </mule>
