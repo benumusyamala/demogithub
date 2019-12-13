@@ -1,0 +1,31 @@
+{
+  "configs": [
+    "unitedapi.xml",
+    "unitedFlightsByDestination.xml",
+    "githubdemo.xml"
+  ],
+  "secureProperties": [],
+  "redeploymentEnabled": true,
+  "name": "com.mycompany:githubdemo:1.0.0-SNAPSHOT",
+  "minMuleVersion": "4.2.2",
+  "requiredProduct": "MULE",
+  "classLoaderModelLoaderDescriptor": {
+    "id": "mule",
+    "attributes": {
+      "exportedPackages": [],
+      "exportedResources": [
+        "api/exemples/flightsbydestination.txt",
+        "api/exemples/united.json",
+        "api/githubdemo.raml",
+        "githubdemo.xml",
+        "log4j2.xml",
+        "unitedapi.xml",
+        "unitedFlightsByDestination.xml"
+      ]
+    }
+  },
+  "bundleDescriptorLoader": {
+    "id": "mule",
+    "attributes": {}
+  }
+}

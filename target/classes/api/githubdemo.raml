@@ -1,0 +1,28 @@
+#%RAML 1.0
+version: v1
+title: githubdemo
+baseUri: http://localhost:8080/api
+/unitedapi: 
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include exemples/united.json
+/unitedFlightsByDestination:
+  get:
+    queryParameters:
+      destination:
+        required: true
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include exemples/united.json
+              
+                
+                  
+              
+            
+          
+    

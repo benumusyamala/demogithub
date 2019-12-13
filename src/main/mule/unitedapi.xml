@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:request-config name="HTTP_Request_configuration" doc:name="HTTP Request configuration" doc:id="824924ec-690a-4c18-ab14-457132e33477" >
+		<http:request-connection host="localhost" port="9090" />
+	</http:request-config>
+	<flow name="unitedapiFlow" doc:id="621bce1d-2138-4533-a1d2-8904a321bd90" >
+		<logger level="INFO" doc:name="Logger" doc:id="bfa19320-2ecc-4052-8b31-369600b86bf5" message="receve msg on github"/>
+		<http:request method="GET" doc:name="Request" doc:id="aeab668b-3bad-44d3-b825-745f4103766a" config-ref="HTTP_Request_configuration" path="/united/flights">
+		</http:request>
+		<logger level="INFO" doc:name="Logger" doc:id="829602cc-d80f-41e4-b849-2547dd712958" message="final responce...#[payload]"/>
+	</flow>
+</mule>
